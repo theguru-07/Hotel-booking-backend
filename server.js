@@ -21,5 +21,6 @@ app.use("/api/clerk", clerkWebHooks)
 app.get('/',(req, res)=> res.send("Api is working"))
 
 
-connectDB()
+connectDB().catch(console.error)
+
 export default app;
